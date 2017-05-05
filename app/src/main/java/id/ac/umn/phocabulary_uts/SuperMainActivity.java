@@ -34,10 +34,10 @@ public class SuperMainActivity extends AppCompatActivity {
                                 fragmentTransaction.replace(R.id.flContainer, new MainActivity()).commit();
                                 return true;
                             case R.id.action_schedules:
-                                fragmentTransaction.replace(R.id.flContainer, new LoginActivity()).commit();
+                                fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
                                 return true;
                             case R.id.action_music:
-                                fragmentTransaction.replace(R.id.flContainer, new LoginActivity()).commit();
+                                fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
                                 return true;
                             case R.id.action_setting:
                                 fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();

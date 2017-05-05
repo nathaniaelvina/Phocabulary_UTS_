@@ -46,4 +46,10 @@
         android:id="@+id/txtConfirmPassword"
         android:hint="Confirm Password">
     </EditText>
+
+    <Button
+        android:text="SIGN UP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSignUp" />
 </LinearLayout>

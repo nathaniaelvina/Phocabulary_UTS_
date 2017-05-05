@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class LoginActivity extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +23,10 @@ public class LoginActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Button btn
         return inflater.inflate(R.layout.activity_login, container, false);
+
     }
+
+
 }

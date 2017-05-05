@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.1_775a6cc6bccad278657d8f5132ee217ebc39cf65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_43d4570917a5924c7c9aa58a3b26f0b3f90080ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_7033688a189a69cce18be3c9e8af0259aebf42a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_780b9f87902b259c27fa093bf36a6392831b2d50\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e3234cd25e23069abd48ecd2117bc0e8011bf45a">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.8.0_18ac4143fb78372ac67d088e04bc7faf642b9462\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.1_2d2193b5f14426b99b05f2ca685403fd3787fe31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="72015a505b93a8b6d3ed6ca99bfa8cd6ad4149eb">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_815e076e095480d36fba1554780cc25528c08362\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_2fd6921e91c38d5c84fe6979d6cbc1bdab9b220f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.1_68ce4b1ba56335e37a5e677ebdd5c5239648b1b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_04ec680095a69f23c18562d41a8876256f3b70a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_7f6567e9ea2dc0b5364f5ee2864a823a28e98b49\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_e92f8f00bc0dd6be64a81c4b05fc37f133b8d245\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5cbfd85e4de2745f0aebd79c74b62ca5a01f056">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1e989924f3448bf58bfaee8282dbfc4b08aec680\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.8.0_076dff63d71fa5a522a6ce59dad803fa424bb182\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_6fbff0f68a68d8a22bac2b3d04a935b41df97929\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_57c295e558f2b95f4f28d96fd0157826f243cef2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_5d86ff2f42dd66c35cee0bfdf28a0a20c37ced3d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_532805f8597659794f316d89247d85ea8aceb048\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_3410f58c8f1412f6c83bb49cb92d854e1d84356d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.8.0_a2a91647a99422a110c1e95c759bd27a40daffa1\classes.dex" />
+    </item>
+
+</items>

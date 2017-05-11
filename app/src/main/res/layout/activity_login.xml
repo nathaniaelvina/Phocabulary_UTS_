@@ -34,7 +34,8 @@
         android:layout_width="match_parent"
         android:id="@+id/txtEmail"
         android:theme="@style/textBox"
-        tools:style="@style/Widget.AppCompat.EditText">
+        tools:style="@style/Widget.AppCompat.EditText"
+        android:alpha="0.5">
     </EditText>
 
     <TextView
@@ -49,7 +50,8 @@
         android:inputType="textPassword"
         android:id="@+id/txtPassword"
         android:theme="@style/textBox"
-        android:layout_weight="0.13">
+        android:layout_weight="0.13"
+        android:alpha="0.5">
     </EditText>
 
     <Button

@@ -31,13 +31,13 @@ public class SuperMainActivity extends AppCompatActivity {
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         switch (item.getItemId()) {
                             case R.id.action_favorites:
-                                fragmentTransaction.replace(R.id.flContainer, new MainActivity()).commit();
+                                fragmentTransaction.replace(R.id.flContainer, new GridViewFragment()).commit();
                                 return true;
                             case R.id.action_schedules:
                                 fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
                                 return true;
                             case R.id.action_music:
-                                fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
+                                fragmentTransaction.replace(R.id.flContainer, new TranslateFragment()).commit();
                                 return true;
                             case R.id.action_setting:
                                 fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();

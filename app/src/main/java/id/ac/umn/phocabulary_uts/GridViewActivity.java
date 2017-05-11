@@ -20,7 +20,7 @@ public class GridViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_grid_view);
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+      //  gridview.setAdapter(new ImageAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent,
                                     View v, int position, long id){
@@ -39,29 +39,7 @@ public class GridViewActivity extends AppCompatActivity {
 
         // handle navigation selection
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        switch (item.getItemId()) {
-                            case R.id.action_favorites:
-                               // fragmentTransaction.replace(R.id.flContainer, new MainActivity()).commit();
-                                return true;
-                            case R.id.action_schedules:
-                                //fragmentTransaction.replace(R.id.flContainer, new LoginActivity()).commit();
-                                return true;
-                            case R.id.action_music:
-                              //  fragmentTransaction.replace(R.id.flContainer, new LoginActivity()).commit();
-                                return true;
-                            case R.id.action_setting:
-                                //fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
-                                return true;
 
-                        }
-                        return false;
-                    }
-                });
 
     }
 

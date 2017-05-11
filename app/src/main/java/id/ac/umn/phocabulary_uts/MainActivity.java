@@ -47,11 +47,6 @@ public class MainActivity extends Fragment {
 
         ((SuperMainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) rootView.findViewById(R.id.viewPager);
-        setupViewPager(viewPager);
-
-        tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(getContext()).addApi(AppIndex.API).build();
@@ -63,13 +58,6 @@ public class MainActivity extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(((SuperMainActivity)getActivity()).getSupportFragmentManager());
-        adapter.addFragment(new TextFragment(), "TEXT");
-        adapter.addFragment2(new PhotoFragment(), "PHOTO");
-
-        viewPager.setAdapter(adapter);
-    }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -125,14 +113,6 @@ public class MainActivity extends Fragment {
             return mFragmentList.size();
         }
 
-        public void addFragment(TextFragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-        public void addFragment2(PhotoFragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
 
         @Override
         public CharSequence getPageTitle(int position) {

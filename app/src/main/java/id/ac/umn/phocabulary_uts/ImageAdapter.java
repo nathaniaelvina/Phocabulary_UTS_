@@ -15,6 +15,7 @@ public class ImageAdapter extends BaseAdapter {
     // Constructor
     public ImageAdapter(Context c) {
         mContext = c;
+
     }
 
     public int getCount() {
@@ -34,6 +35,8 @@ public class ImageAdapter extends BaseAdapter {
         ImageView imageView;
 
         if (convertView == null) {
+         
+
             imageView = new ImageView(mContext);
             imageView.setLayoutParams(new GridView.LayoutParams(450, 450));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);

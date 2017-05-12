@@ -9,6 +9,7 @@
         <ImageView
             android:layout_height="200dp"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             />
     </TableRow>
     <TableRow>
@@ -24,13 +25,15 @@
             android:layout_weight="1"
             android:id="@+id/spinnerTo" />
     </TableRow>
-    <TableRow>
+    <TableRow
+        android:layout_margin="16dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtTranslate"
             android:layout_weight="2"
-            android:hint="word" />
+            android:hint="word"
+            />
     </TableRow>
     <TableRow>
         <Button
@@ -38,9 +41,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnTranslate"
             android:layout_weight="1"
-            android:layout_gravity="right"
             android:text="translate"
             android:background="@drawable/button"
+            android:textColor="@drawable/text_button"
+            android:layout_margin="16dp"
              />
     </TableRow>
 
@@ -50,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="cara baca"
+            android:layout_margin="16dp"
             />
     </TableRow>
 
@@ -59,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Arti"
+            android:layout_margin="16dp"
             />
     </TableRow>
     <TableRow>
@@ -67,6 +73,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtMeaning"
             android:layout_weight="2"
+            android:layout_margin="16dp"
             />
     </TableRow>
     <TableRow>
@@ -75,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Memo"
+            android:layout_margin="16dp"
             />
     </TableRow>
     <TableRow>
@@ -83,6 +91,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtMemo"
             android:layout_weight="2"
+            android:layout_margin="16dp"
             />
     </TableRow>
     <TableRow>
@@ -92,10 +101,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnSave"
             android:layout_weight="1"
-            android:layout_gravity="right"
-
             android:text="save"
             android:background="@drawable/button"
+            android:textColor="@drawable/text_button"
+            android:layout_margin="16dp"
             />
     </TableRow>
 

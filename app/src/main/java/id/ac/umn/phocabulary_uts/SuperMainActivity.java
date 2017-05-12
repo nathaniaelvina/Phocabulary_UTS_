@@ -32,6 +32,7 @@ public class SuperMainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.action_favorites:
                                 fragmentTransaction.replace(R.id.flContainer, new GridViewFragment()).commit();
+
                                 return true;
                             case R.id.action_schedules:
                                 fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();

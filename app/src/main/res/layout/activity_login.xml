@@ -55,9 +55,13 @@
     </EditText>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:id="@+id/loginBtn"/>
+        android:layout_gravity="center"
+        android:id="@+id/loginBtn"
+        android:background="@drawable/button"
+        android:textColor="@drawable/text_button"
+        />
 
 </LinearLayout>

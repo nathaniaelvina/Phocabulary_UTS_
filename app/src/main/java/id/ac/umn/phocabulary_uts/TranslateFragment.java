@@ -147,7 +147,7 @@ public class TranslateFragment extends Fragment {
 
     String saveVocab(Spinner spinnerFrom, Spinner spinnerTo, EditText txtSrc, EditText txtTarget, EditText memo){
         JSONParser jsonParser = new JSONParser();
-        String url_save = "http://192.168.43.219/phocabulary/save_phocab.php";
+        String url_save = "http://192.168.0.21/phocabulary/save_phocab.php";
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();

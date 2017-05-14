@@ -1,6 +1,8 @@
 package id.ac.umn.phocabulary_uts;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +21,10 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.translate);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         final EditText emailEdit = (EditText) findViewById(R.id.txtEmail);
@@ -44,6 +50,17 @@ public class LoginActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
+                Intent i = new Intent(getBaseContext(),SuperMainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), SignUpActivity.class);
+                startActivity(i);
             }
         });
 

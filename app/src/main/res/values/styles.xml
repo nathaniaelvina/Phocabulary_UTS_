@@ -14,8 +14,8 @@
 
     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -23,5 +23,10 @@
     <style name="textBox">
         <item name="android:editTextBackground">@color/textColorPrimary</item>
         <item name="android:height">@dimen/textBoxHeight</item>
+    </style>
+    <style name="bottomNav" >
+        <item name="android:width">24dp</item>
+        <item name="android:maxWidth">24dp</item>
+        <item name="android:minWidth">24dp</item>
     </style>
 </resources>

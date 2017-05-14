@@ -15,12 +15,18 @@ import android.view.MenuItem;
 public class SuperMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.translate);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_super_main);
         final FragmentManager fragmentManager = getSupportFragmentManager();
-
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         // define your fragments here
+        fragmentTransaction.replace(R.id.flContainer, new GridViewFragment()).commit();
+
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationHelper.disableShiftMode(bottomNavigationView);
 
         // handle navigation selection
 
@@ -28,21 +34,27 @@ public class SuperMainActivity extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
                         switch (item.getItemId()) {
                             case R.id.action_favorites:
-                                fragmentTransaction.replace(R.id.flContainer, new GridViewFragment()).commit();
+                                fragmentTransaction2.replace(R.id.flContainer, new GridViewFragment()).commit();
 
                                 return true;
                             case R.id.action_schedules:
-                                fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
+                                fragmentTransaction2.replace(R.id.flContainer, new TranslateFragment()).commit();
+
                                 return true;
                             case R.id.action_music:
-                                fragmentTransaction.replace(R.id.flContainer, new TranslateFragment()).commit();
+                                fragmentTransaction2.replace(R.id.flContainer, new SettingFragment()).commit();
                                 return true;
                             case R.id.action_setting:
-                                fragmentTransaction.replace(R.id.flContainer, new SettingFragment()).commit();
+                                fragmentTransaction2.replace(R.id.flContainer, new SettingFragment()).commit();
                                 return true;
+
+
+
+
+
 
                         }
                         return false;

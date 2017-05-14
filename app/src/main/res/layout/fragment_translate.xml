@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.ac.umn.phocabulary_uts.TranslateFragment">
+    tools:context="id.ac.umn.phocabulary_uts.TranslateFragment"
+    android:layout_margin="5dp">
 
     <!-- TODO: Update blank fragment layout -->
     <TableRow>
         <ImageView
-            android:layout_height="200dp"
+            android:layout_height="180dp"
             android:layout_width="match_parent"
             android:layout_gravity="center"
             />
@@ -17,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+
             android:id="@+id/spinnerFrom"
             />
         <Spinner
@@ -26,35 +28,13 @@
             android:id="@+id/spinnerTo" />
     </TableRow>
     <TableRow
-        android:layout_margin="16dp">
+        android:layout_margin="5dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtTranslate"
             android:layout_weight="2"
             android:hint="word"
-            />
-    </TableRow>
-    <TableRow>
-        <Button
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnTranslate"
-            android:layout_weight="1"
-            android:text="translate"
-            android:background="@drawable/button"
-            android:textColor="@drawable/text_button"
-            android:layout_margin="16dp"
-             />
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="cara baca"
-            android:layout_margin="16dp"
             />
     </TableRow>
 
@@ -64,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Arti"
-            android:layout_margin="16dp"
+
             />
     </TableRow>
     <TableRow>
@@ -73,7 +53,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtMeaning"
             android:layout_weight="2"
-            android:layout_margin="16dp"
+
             />
     </TableRow>
     <TableRow>
@@ -82,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Memo"
-            android:layout_margin="16dp"
+            android:layout_margin="5dp"
             />
     </TableRow>
     <TableRow>
@@ -91,7 +71,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtMemo"
             android:layout_weight="2"
-            android:layout_margin="16dp"
+            android:layout_margin="5dp"
             />
     </TableRow>
     <TableRow>
@@ -104,8 +84,19 @@
             android:text="save"
             android:background="@drawable/button"
             android:textColor="@drawable/text_button"
-            android:layout_margin="16dp"
+            android:layout_margin="5dp"
             />
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnTranslate"
+                android:layout_gravity="center"
+                android:text="translate"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:textColor="@drawable/text_button"
+                android:layout_margin="5dp"/>
     </TableRow>
 
 </TableLayout>

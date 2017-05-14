@@ -8,5 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:ellipsize="middle"
+        android:textColor="@color/colorPrimaryDark"/>
 </LinearLayout>

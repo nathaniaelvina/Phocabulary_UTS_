@@ -12,23 +12,25 @@
 
     tools:context="id.ac.umn.phocabulary_uts.SignUpActivity">
 
-    <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/txtUsername"
-        android:hint="Username">
-    </EditText>
+
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/txtFullName"
-        android:hint="Full Name">
+        android:hint="Full Name"
+        android:drawableLeft="@drawable/fullname"
+        android:drawablePadding="20dp"
+
+        android:elevation="0dp">
     </EditText>
+
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/txtEmail"
         android:hint="Email"
+        android:drawableLeft="@drawable/email_50"
+        android:drawablePadding="20dp"
         >
     </EditText>
     <EditText
@@ -37,6 +39,8 @@
         android:inputType="textPassword"
         android:id="@+id/txtPassword"
         android:hint="Password"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="20dp"
         >
     </EditText>
     <EditText
@@ -44,7 +48,9 @@
         android:layout_width="match_parent"
         android:inputType="textPassword"
         android:id="@+id/txtConfirmPassword"
-        android:hint="Confirm Password">
+        android:hint="Confirm Password"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="20dp">
     </EditText>
 
     <Button
@@ -54,5 +60,5 @@
         android:id="@+id/btnSignUp"
         android:background="@drawable/button"
         android:textColor="@drawable/text_button"
-        />
+        android:drawablePadding="20dp"/>
 </LinearLayout>

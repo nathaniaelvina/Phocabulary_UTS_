@@ -12,7 +12,8 @@
     android:orientation="vertical"
     tools:context="id.ac.umn.phocabulary_uts.LoginActivity"
     android:background="@drawable/main_header_selector"
-    android:weightSum="1">
+    android:weightSum="1"
+    >
 
     <ImageView
         android:layout_width="match_parent"
@@ -64,4 +65,13 @@
         android:textColor="@drawable/text_button"
         />
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_gravity="center"
+        android:id="@+id/signUpBtn"
+        android:background="@drawable/button"
+        android:textColor="@drawable/text_button"
+        />
 </LinearLayout>

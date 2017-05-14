@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_favorites"
-        android:enabled="true"
-        android:icon="@drawable/common_full_open_on_phone"
-        android:title="A"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/list"
+        android:title="List"
+   />
     <item
         android:id="@+id/action_schedules"
-        android:enabled="true"
-        android:icon="@drawable/common_full_open_on_phone"
-        android:title="B"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/translate"
+        android:title="Translate"
+        />
     <item
         android:id="@+id/action_music"
         android:enabled="true"
-        android:icon="@drawable/common_full_open_on_phone"
-        android:title="C"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/games"
+        android:title="Review"
+      />
     <item
         android:id="@+id/action_setting"
         android:enabled="true"
-        android:icon="@drawable/common_full_open_on_phone"
-        android:title="D"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/user"
+        android:title="User"
+
+    />
+
 </menu>

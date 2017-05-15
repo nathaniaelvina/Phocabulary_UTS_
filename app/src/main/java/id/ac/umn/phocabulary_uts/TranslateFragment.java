@@ -1,9 +1,15 @@
 package id.ac.umn.phocabulary_uts;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +18,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,9 +55,11 @@ public class TranslateFragment extends Fragment {
     EditText txtSrc;
     EditText txtTarget;
     EditText memo;
+    ImageView ivThumbnail;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         translateView = inflater.inflate(R.layout.fragment_translate, container, false);
 
         spinnerFrom = (Spinner) translateView.findViewById(R.id.spinnerFrom);
@@ -61,13 +72,13 @@ public class TranslateFragment extends Fragment {
 
         List<String> list;
 
-        categories.add("English");
-        categories.add("Japanese");
-        categories.add("Indonesian");
-        categories.add("French");
-        categories.add("Spanish");
         categories.add("Chinese");
+        categories.add("English");
+        categories.add("French");
+        categories.add("Indonesian");
+        categories.add("Japanese");
         categories.add("Korean");
+        categories.add("Spanish");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, categories);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -76,6 +87,7 @@ public class TranslateFragment extends Fragment {
         spinnerTo.setAdapter(dataAdapter);
 
         words = txtSrc.getText().toString();
+
 
         Button translateBtn = (Button) translateView.findViewById(R.id.btnTranslate);
         translateBtn.setOnClickListener(new View.OnClickListener() {
@@ -112,20 +124,27 @@ public class TranslateFragment extends Fragment {
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                txtTarget.setText(result);
+                                uploadImage();
                                 Toast.makeText(getContext(),result, Toast.LENGTH_SHORT).show();
+
                             }
                         });
                     }
                 });
                 t.start();
 
-
-
             }
 
         });
 
+
+        ivThumbnail = (ImageView) translateView.findViewById(R.id.ivThumbnail);
+        ivThumbnail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takePhoto();
+            }
+        });
         // Inflate the layout for thi s fragment
         return translateView;
     }
@@ -147,11 +166,12 @@ public class TranslateFragment extends Fragment {
 
     String saveVocab(Spinner spinnerFrom, Spinner spinnerTo, EditText txtSrc, EditText txtTarget, EditText memo){
         JSONParser jsonParser = new JSONParser();
-        String url_save = "http://192.168.0.21/phocabulary/save_phocab.php";
+        String url_save = URL.url_save;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();
-        p.put("userID", "1"); //nanti ambil dr sharedPref
+        SharedPreferences sharedPref = this.getActivity().getSharedPreferences("SESSION", Context.MODE_PRIVATE);
+        p.put("userID",sharedPref.getString("USER_ID","0") ); //nanti ambil dr sharedPref
         p.put("srcWord",txtSrc.getText().toString());
         p.put("targetWord", txtTarget.getText().toString());
         p.put("srcLang",convertToLangCode(spinnerFrom.getSelectedItem().toString()));
@@ -182,7 +202,7 @@ public class TranslateFragment extends Fragment {
 
     String translate(String langFromConvert, String langToConvert, String words){
         JSONParser jsonParser = new JSONParser();
-        String url_translate="http://192.168.43.219/phocabulary/translate.php";
+        String url_translate=URL.url_translate;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();
@@ -206,6 +226,80 @@ public class TranslateFragment extends Fragment {
  //                   Toast.makeText(getBaseContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
             return result;
         }
+
+
+    }
+
+    File myFilesDir;
+    void takePhoto() {
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        //intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(myFilesDir.toString()+"/temp.jpg")));
+        startActivityForResult(intent, 0);
+    }
+    Bitmap bitmap;
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0 && resultCode == getActivity().RESULT_OK) {
+            /*Bitmap cameraBitmap;
+            cameraBitmap = BitmapFactory.decodeFile(myFilesDir + "/temp.jpg");
+            Bitmap.createBitmap(cameraBitmap);
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            cameraBitmap.compress(Bitmap.CompressFormat.JPEG, 5, out);
+            bitmap=cameraBitmap;
+            //Bitmap decoded5 = BitmapFactory.decodeStream(new ByteArrayInputStream(out.toByteArray()));
+            //bitmap=decoded5;
+            ivThumbnail.setImageBitmap(cameraBitmap);*/
+
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            bitmap=imageBitmap;
+            ivThumbnail.setImageBitmap(imageBitmap);
+        }
+    }
+    public static final String UPLOAD_URL = URL.url_upload;
+    public static final String UPLOAD_KEY = "image";
+    public static final String TAG = "MY MESSAGE";
+    private void uploadImage(){
+        class UploadImage extends AsyncTask<Bitmap,Void,String> {
+
+            ProgressDialog loading;
+            RequestHandler rh = new RequestHandler();
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(getActivity(), "Uploading Image", "Please wait...",true,true);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                Toast.makeText(getContext(),s,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            protected String doInBackground(Bitmap... params) {
+                Bitmap bitmap = params[0];
+                String uploadImage = getStringImage(bitmap);
+
+                HashMap<String,String> data = new HashMap<>();
+                data.put(UPLOAD_KEY, uploadImage);
+
+                String result = rh.sendPostRequest(UPLOAD_URL,data);
+                System.out.println("hasilnya"+result);
+                return result;
+            }
+        }
+
+        UploadImage ui = new UploadImage();
+        ui.execute(bitmap);
+    }
+    public String getStringImage(Bitmap bmp){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] imageBytes = baos.toByteArray();
+        String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+        return encodedImage;
     }
 
 }

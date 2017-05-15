@@ -59,11 +59,9 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             result[0] =     register(emailEdit, passwordEdit,fullNameEdit);
-                           //  saveVocab(spinnerFrom , spinnerTo, txtSrc, txtTarget, memo );
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                  //  txtTarget.setText(result);
                                     Toast.makeText(getBaseContext(), result[0], Toast.LENGTH_SHORT).show();
                                 }
                             });
@@ -79,7 +77,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
     String register(EditText email, EditText password, EditText name){
         JSONParser jsonParser = new JSONParser();
-        String url_save = "http://192.168.0.21/phocabulary/SignUp.php";
+        String url_signup = URL.url_signup;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();
@@ -89,7 +87,7 @@ public class SignUpActivity extends AppCompatActivity {
         p.put("password",password.getText().toString());
         String result2="nia";
         try{
-            json = jsonParser.makeHttpRequest(url_save, "POST", p);
+            json = jsonParser.makeHttpRequest(url_signup, "POST", p);
             try {
                 result2 = json.getString("message");
                 System.out.println(result2);

@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="4fed3a6a0fefe54a830904048f829840974a6f09">
+        sha1="f4203758e180c3f02d622077fe53625cd990013f">
         <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_815e076e095480d36fba1554780cc25528c08362\classes.dex" />
     </item>
     <item
@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6816674d897a5622daefb8c096b3c8dc8cf37397">
+        sha1="2d9aeb86166c61049aee0d9548d862a03acfa60a">
         <dex dex="C:\Users\Nathania\AndroidStudioProjects\Phocabulary_UTS\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1e989924f3448bf58bfaee8282dbfc4b08aec680\classes.dex" />
     </item>
     <item

@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     String login(EditText email, EditText password){
         JSONParser jsonParser = new JSONParser();
-        String url_login = URL.url_login;
+        String url_login = URLLists.url_login;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();

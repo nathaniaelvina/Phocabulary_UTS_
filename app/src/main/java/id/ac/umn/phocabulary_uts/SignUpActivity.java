@@ -77,7 +77,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
     String register(EditText email, EditText password, EditText name){
         JSONParser jsonParser = new JSONParser();
-        String url_signup = URL.url_signup;
+        String url_signup = URLLists.url_signup;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();

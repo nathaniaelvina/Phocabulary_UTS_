@@ -56,7 +56,7 @@ public class TranslateFragment extends Fragment {
     EditText txtTarget;
     EditText memo;
     ImageView ivThumbnail;
-
+    Button btnSave;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -112,7 +112,7 @@ public class TranslateFragment extends Fragment {
             }
         });
 
-        Button btnSave = (Button) translateView.findViewById(R.id.btnSave);
+        btnSave = (Button) translateView.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             String result;
             @Override
@@ -166,7 +166,7 @@ public class TranslateFragment extends Fragment {
 
     String saveVocab(Spinner spinnerFrom, Spinner spinnerTo, EditText txtSrc, EditText txtTarget, EditText memo){
         JSONParser jsonParser = new JSONParser();
-        String url_save = URL.url_save;
+        String url_save = URLLists.url_save;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();
@@ -202,7 +202,7 @@ public class TranslateFragment extends Fragment {
 
     String translate(String langFromConvert, String langToConvert, String words){
         JSONParser jsonParser = new JSONParser();
-        String url_translate=URL.url_translate;
+        String url_translate=URLLists.url_translate;
 
         JSONObject json;
         HashMap<String,String> p=new HashMap<String,String>();
@@ -255,7 +255,7 @@ public class TranslateFragment extends Fragment {
             ivThumbnail.setImageBitmap(imageBitmap);
         }
     }
-    public static final String UPLOAD_URL = URL.url_upload;
+    public static final String UPLOAD_URLLists = URLLists.url_upload;
     public static final String UPLOAD_KEY = "image";
     public static final String TAG = "MY MESSAGE";
     private void uploadImage(){
@@ -267,6 +267,7 @@ public class TranslateFragment extends Fragment {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+                btnSave.setEnabled(false);
                 loading = ProgressDialog.show(getActivity(), "Uploading Image", "Please wait...",true,true);
             }
 
@@ -274,6 +275,7 @@ public class TranslateFragment extends Fragment {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
+                btnSave.setEnabled(true);
                 Toast.makeText(getContext(),s,Toast.LENGTH_LONG).show();
             }
 
@@ -285,7 +287,7 @@ public class TranslateFragment extends Fragment {
                 HashMap<String,String> data = new HashMap<>();
                 data.put(UPLOAD_KEY, uploadImage);
 
-                String result = rh.sendPostRequest(UPLOAD_URL,data);
+                String result = rh.sendPostRequest(UPLOAD_URLLists,data);
                 System.out.println("hasilnya"+result);
                 return result;
             }
